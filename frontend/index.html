@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q3 - Student Timetable & Goals</title>
+  <style>
+    body{font-family:Arial; max-width:1000px; margin:auto; padding:20px; background:#f9f9f9}
+    h2{color:#2c3e50}
+    form{background:white; padding:15px; border-radius:8px; display:flex; flex-wrap:wrap; gap:8px}
+    input,select{padding:8px; border:1px solid #ccc; border-radius:4px}
+    button{padding:8px 15px; background:#3498db; color:white; border:none; border-radius:4px; cursor:pointer}
+    button:hover{background:#2980b9}
+    table{width:100%; background:white; border-collapse:collapse; margin-top:20px; border-radius:8px; overflow:hidden}
+    th,td{border:1px solid #eee; padding:10px; text-align:left}
+    th{background:#2c3e50; color:white}
+    .delete{background:#e74c3c}
+  </style>
+</head>
+<body>
+  <h2>Student Timetable & Goals - Question 3</h2>
+
+  <form id="timetableForm">
+    <input id="course_code" placeholder="Course Code*" required style="width:120px">
+    <input id="course_name" placeholder="Course Name" style="width:180px">
+    <select id="day_of_week">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+    <input id="start_time" type="time">
+    <input id="end_time" type="time">
+    <input id="venue" placeholder="Venue" style="width:100px">
+    <input id="goal" placeholder="Goal" style="width:150px">
+    <select id="status">
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+    <button type="submit" id="submitBtn">Add</button>
+    <button type="button" onclick="resetForm()" style="background:#95a5a6">Cancel</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Code</th><th>Course</th><th>Day</th><th>Time</th><th>Venue</th><th>Goal</th><th>Status</th><th>Action</th></tr>
+    </thead>
+    <tbody id="timetableList"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
