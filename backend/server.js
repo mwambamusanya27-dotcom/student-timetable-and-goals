@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // GET /api/timetable -> List all
-app.get('/api/timetable', (req, res) => {
+app.get('/ap {
   db.all("SELECT * FROM timetable ORDER BY id DESC", (err, rows) => {
     if (err) return res.status(500).json({ error: err.message });
     res.json(rows);
